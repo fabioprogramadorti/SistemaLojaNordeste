@@ -7,6 +7,7 @@ const express = require("express");
 const router = express.Router();
 const config = require('config')
 
+
 router.get("/current", auth, async (req, res) => {
   try {
     const user = await User.findById(req.user._id).select('-password');;
