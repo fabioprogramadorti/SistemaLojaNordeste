@@ -29,6 +29,14 @@ npm i
 Então as dependências serão instaladas no sistema
 Obs: apagar os arquivos "package-lock.json" de ambos os diretórios.
 
+Para "rodar" client, deve-se entrar no diretório com o mesmo nome usar o comando:
+
+npm start
+
+Para "rodar" serve, deve-se entrar no diretório com o mesmo nome usar o comando:
+
+nodemon
+
 # Funcionamento do Sistema
 
 Esse sistema conta com algumas telas de navegação:
