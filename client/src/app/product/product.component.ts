@@ -22,8 +22,7 @@ export class ProductComponent implements OnInit {
   ngOnInit() {
     this.auth.products().subscribe(
       product => {
-        this.details = product
-        console.log(product)
+        this.details = product        
       },
       err => {
         console.error(err)
