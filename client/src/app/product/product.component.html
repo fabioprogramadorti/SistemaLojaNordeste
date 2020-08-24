@@ -1,1 +1,51 @@
-<p>product works!</p>
+<div class="container">
+    <div class="row">
+      <div class="col-md-6 mt-5 mx-auto">
+        <form (submit)="registerProduct()">
+          <h1 class="h3 mb-3 font-weight-normal">Sistema de Registro de Produtos</h1>
+          <div class="form-group">
+            <label for="name">Nome</label>
+            <input type="text" class="form-control" name="name" placeholder="Nome do Produto" [(ngModel)]="product.name">
+          </div>
+          <div class="form-group">
+            <label for="name">Preço</label>
+            <input type="text" class="form-control" name="price" placeholder="Preço do Produto" [(ngModel)]="product.price">
+          </div>
+          <div class="form-group">
+            <label for="email">Quantidade</label>
+            <input type="text" class="form-control" name="amount" placeholder="Quantidade de Produtos" [(ngModel)]="product.quantities">
+          </div>
+          <button type="submit" class="btn btn-lg btn-primary btn-block">Registrar Produto!</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  
+
+
+  <div class="container">
+    <div class="jumbotron mt-5">
+      <div class="col-sm-8 mx-auto">
+        <h1 class="text-center">Lista de Produtos</h1>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Nome</th>
+            <th>Preço</th>
+            <th>Quantidade</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let detail of details; let i = index">
+            <td class="text-center" >{{ i + 1 }}</td>
+            <td class="text-center" >{{detail.name}}</td>
+            <td class="text-center" >{{detail.price}}</td>
+            <td class="text-center" >{{detail.quantities}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
